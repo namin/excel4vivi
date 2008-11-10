@@ -1,0 +1,3 @@
+Build the ExcelDNA samples by double-clicking on makedna.bat,
+which generates *.xll and *.dna files for each file whose name starts with 'dna',
+e.g. for dnaX.fsx, X.xll and X.dna will be generated.

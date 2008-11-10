@@ -1,0 +1,7 @@
+<DnaLibrary Name="$NAME" Language="F#">
+<![CDATA[
+
+$SCRIPT
+
+]]>
+</DnaLibrary>
