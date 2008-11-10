@@ -1,0 +1,71 @@
+Version 0.16 (3 September 2008)
+-------------------------------
+* Move IsHidden field from ExcelCommandAttribute to ExcelFunctionAttribute to enable 'hidden' functions.
+* Fix AddInManagerInfo.
+* Add support for FSharp September CTP.
+* Make unrooted HelpTopics relative to the xll directory.
+
+Version 0.15 (28 July 2008)
+---------------------------
+* ExcelDna.Integration.Excel class is obsolete. Use ExcelDna.Integration.ExcelDnaUtil.
+The 'Excel' class could be confused with the COM Interop class.
+* Minor fixes for backward compatibility.
+
+Version 0.14 (21 July 2008)
+---------------------------
+* New unmanaged loader architecture.
+* Every Add-In is loaded into it's own AppDomain.
+* No MSVC*.dll dependency.
+* Clear messages if runtime is not present or wrong version is loaded.
+* Visual Studio 2008 solution and projects.
+* Breaking Change: ExcelDna.Integration.XlLIbrary.RegisterMethods is now ExcelDna.Integration.Integration.RegisterMethods, e.g. see Samples08.dna 
+
+Version 0.11 (18 March 2007)
+----------------------------
+* Fixed bug when library had function with object[] and object[,] arguments.
+* Created explicit manifests to allow RTM version of C runtime, even when ExcelDna.xll is compiled with Visual Studio 2005 Service Pack 1. This should fix the strange loading problems reported since version 0.8.
+
+Version 0.9 (23 Feburary 2007)
+------------------------------
+* Fixed loading bug from version 0.8.
+* Fixed bug when more that 20 arguments. (At most 20 argument descriptions are allowed.)
+
+Version 0.8 (21 January 2007)
+------------------------------
+* Methods can be dynamically registered in the AutoOpen method of an AddIn.
+ExcelDna.Integration.XlLibrary.RegisterMethods(..) takes a list of MethodInfos to register. See Sample08.dna for an example.
+* Arguments of type object[] and double[] now also accept single column values. If the range passed in has exactly one column, that column is used as the array. If more than one column is passed, the first row is used, as before. object[,] and double[,] have not changed.
+* Minor changes to the Logging window.
+
+Version 0.7 (24 November 2006)
+------------------------------
+* More changes to string marshaling - returned strings now allocated only to required length.
+
+Version 0.6 (15 November 2006)
+------------------------------
+* Fixed Excel crash under stress for functions taking arrays of strings.
+* Restructured memory management in marshaling.
+
+Version 0.5 (29 June 2006)
+--------------------------
+* Fixed stack overflow when loading addin with no .dna file.
+* Fixed Excel crash when returning empty array for double[] return type.
+
+Version 0.4 (25 June 2006)
+--------------------------
+* Changed unload behaviour. Methods, commands and menus are unloaded only when AutoRemove is called (when the addin is removed from the AddIns list. I still call then Add-In's AutoClose when Excel calls AutoClose.
+
+Version 0.3 (28 May 2006)
+-------------------------
+* Support for the Decimal datatype as a parameter, explicit return type and object return value.
+* Rudimentary logging support - see ExcelDna.Logging.LogDisplay.Write / WriteLine.
+* Preview support for Excel Services UDF DLLs with UdfClass and UdfMethod. Current missing are some datatypes and IsVolatile support. Also you currently need to copy the attribute .dll to the same directory as the add-in.
+
+Version 0.2 (20 Feb 2006)
+-------------------------
+* Ensure that library is initialized when xlAddInManagerInfo is called. Thanks Stepan Radkovsky for the help.
+* Changed the attribute on DnaLibrary that determines Add-In display name to 'Name'.
+
+Version 0.1 (16 Jan 2006)
+-------------------------
+* Initial version
