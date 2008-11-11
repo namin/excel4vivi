@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{099D38D8-03E3-43B7-8004-497C95E2F044}"
+	ProjectSection(SolutionItems) = preProject
+		test.fsx = test.fsx
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ExcelDNA", "ExcelDNA\ExcelDNA.fsproj", "{CA556C13-A8D7-4B25-A2CF-D1360B351B0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA556C13-A8D7-4B25-A2CF-D1360B351B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA556C13-A8D7-4B25-A2CF-D1360B351B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA556C13-A8D7-4B25-A2CF-D1360B351B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA556C13-A8D7-4B25-A2CF-D1360B351B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

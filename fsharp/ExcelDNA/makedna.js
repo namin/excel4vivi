@@ -1,5 +1,5 @@
 // the location of the ExcelDna.xll relative to the current directory
-var relXll = "../third-party/ExcelDna/Distribution/ExcelDna.xll";
+var relXll = "../../third-party/ExcelDna/Distribution/ExcelDna.xll";
 // the location of the template for the .dna file relative to the current directory
 // the template must have placeholders for $NAME and $SCRIPT
 var relDnaTemplate = "makedna.dna";
@@ -49,9 +49,9 @@ function getDnaFiles(dir) {
 }
 var files = getDnaFiles(dir);
 
-// returns X for dnaX.fsx
+// returns X for dnaX.fs
 function getScriptName(fn) {
-	return fn.substr(3,fn.length-7);
+	return fn.substr(3,fn.length-6);
 }
 // generates the *.xll and *.dna files for the given file path
 function generateDna(fn) {
